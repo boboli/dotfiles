@@ -1,3 +1,3 @@
 zshloc=$(which zsh)
 
-chsh -s $zshloc $USER
+sudo chsh -s $zshloc $USER
