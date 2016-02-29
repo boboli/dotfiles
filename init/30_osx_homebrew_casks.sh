@@ -18,73 +18,73 @@ brew cask info this-is-somewhat-annoying 2>/dev/null
 
 # Homebrew casks
 casks=(
-  # Applications
+#  # Applications
   1password
-  a-better-finder-rename
-  aluxian-messenger
-  battle-net
+#  a-better-finder-rename
+#  aluxian-messenger
+#  battle-net
   bettertouchtool
-  charles
-  chromium
-  chronosync
+#  charles
+#  chromium
+#  chronosync
   dropbox
-  duet
-  easysimbl
-  fastscripts
+#  duet
+#  easysimbl
+#  fastscripts
   firefox
   google-chrome
-  gyazo
-  hermes
-  hex-fiend
+#  gyazo
+#  hermes
+#  hex-fiend
   iterm2
-  karabiner
-  launchbar
+#  karabiner
+#  launchbar
   macvim
-  menumeters
-  midi-monitor
-  moom
-  omnidisksweeper
-  race-for-the-galaxy
-  reaper
-  remote-desktop-connection
-  scroll-reverser
-  seil
-  sharemouse
-  skype
+#  menumeters
+#  midi-monitor
+#  moom
+#  omnidisksweeper
+#  race-for-the-galaxy
+#  reaper
+#  remote-desktop-connection
+#  scroll-reverser
+#  seil
+#  sharemouse
+#  skype
   slack
-  sonos
-  sourcetree
-  spotify
-  star-realms
+#  sonos
+#  sourcetree
+#  spotify
+#  star-realms
   steam
-  synology-assistant
-  teamspeak-client
-  teamviewer
-  the-unarchiver
-  todoist
-  totalfinder
-  tower
-  transmission-remote-gui
+#  synology-assistant
+#  teamspeak-client
+#  teamviewer
+#  the-unarchiver
+#  todoist
+#  totalfinder
+#  tower
+#  transmission-remote-gui
   vagrant
   virtualbox
-  vlc
-  ynab
-  # Drivers
-  d235j-xbox360-controller-driver
-  # Quick Look plugins
-  betterzipql
-  qlcolorcode
-  qlmarkdown
-  qlprettypatch
-  qlstephen
-  quicklook-csv
-  quicklook-json
-  quicknfo
-  suspicious-package
-  webpquicklook
-  # Color pickers
-  colorpicker-developer
-  colorpicker-skalacolor
+#  vlc
+#  ynab
+#  # Drivers
+#  d235j-xbox360-controller-driver
+#  # Quick Look plugins
+#  betterzipql
+#  qlcolorcode
+#  qlmarkdown
+#  qlprettypatch
+#  qlstephen
+#  quicklook-csv
+#  quicklook-json
+#  quicknfo
+#  suspicious-package
+#  webpquicklook
+#  # Color pickers
+#  colorpicker-developer
+#  colorpicker-skalacolor
 )
 
 # Install Homebrew casks.
