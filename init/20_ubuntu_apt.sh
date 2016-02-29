@@ -37,6 +37,9 @@ sudo apt-get -qq dist-upgrade
 # Install APT packages.
 packages=(
   build-essential
+  autoconf
+  cmake
+  python-dev
   git-core
   htop
   nmap
