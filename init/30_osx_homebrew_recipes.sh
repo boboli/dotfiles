@@ -20,6 +20,7 @@ recipes=(
   man2html
 #  mercurial
 #  nmap
+  php
 #  sl
 #  ssh-copy-id
   terminal-notifier
