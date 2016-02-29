@@ -14,6 +14,3 @@ fi
 # turn off annoying ctrl-Q/S issues
 stty ixany
 stty ixoff -ixon
-
-# Keeps the paths from growing too big
-typeset -U path manpath fpath
