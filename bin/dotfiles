@@ -305,13 +305,8 @@ fi
 export PATH
 
 # Tweak file globbing.
-if [ -n "$ZSH_VERSION" ]; then
-    setopt -s dotglob
-    setopt -s nullglob
-elif [ -n "$BASH_VERSION" ]; then
-    shopt -s dotglob
-    shopt -s nullglob
-fi
+shopt -s dotglob
+shopt -s nullglob
 
 # Create caches dir and init subdir, if they don't already exist.
 mkdir -p "$DOTFILES/caches/init"
