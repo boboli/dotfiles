@@ -1,10 +1,6 @@
 # Case-insensitive globbing (used in pathname expansion)
 setopt -s nocaseglob
 
-# Check the window size after each command and, if necessary,
-# update the values of LINES and COLUMNS.
-setopt -s checkwinsize
-
 export GREP_OPTIONS='--color=auto'
 
 # Prevent less from clearing the screen while still showing colors.
