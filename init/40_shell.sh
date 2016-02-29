@@ -1,3 +1,3 @@
 zshloc=$(which zsh)
 
-chsh -s $zshloc bobo
+chsh -s $zshloc $USER
