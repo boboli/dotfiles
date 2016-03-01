@@ -40,7 +40,8 @@ packages=(
   autoconf
   cmake
   python-dev
-  php
+  php5
+  php5-curl
   git-core
   htop
   nmap
