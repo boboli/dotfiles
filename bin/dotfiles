@@ -51,6 +51,21 @@ function get_os() {
   done
 }
 
+# github.com SSH key verification and add into known_hosts
+function verify_add_github() {
+  local expected_fingerprint="SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8"
+  local actual_fingerprint=$(ssh-keyscan -t rsa github.com > /tmp/github.pub 2>/dev/null && ssh-keygen -l -E sha256 -f /tmp/github.pub | awk '{ print $2}')
+  if [[ $actual_fingerprint = $expected_fingerprint ]]; then
+    # make backup
+    cp ~/.ssh/known_hosts{,.old}
+    ssh-keyscan -H github.com 2>/dev/null | sort -u - ~/.ssh/known_hosts > /tmp/known_hosts
+    mv /tmp/known_hosts ~/.ssh/known_hosts
+    return 0
+  else
+    return 1
+  fi
+}
+
 # Remove an entry from $PATH
 # Based on http://stackoverflow.com/a/2108540/142339
 function path_remove() {
@@ -282,6 +297,12 @@ fi
 # Initialize.
 if [[ ! -d $DOTFILES ]]; then
   # $DOTFILES directory doesn't exist? Clone it!
+  # Need to add github to known_hosts first!
+  if [[ !verify_add_github ]]; then
+    e_error "Github SSH key could not be verified!"
+    exit 1
+  fi
+
   new_dotfiles_install=1
   prompt_delay=15
   e_header "Downloading dotfiles"
