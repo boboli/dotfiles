@@ -38,7 +38,11 @@ endif
 
 let g:solarized_termtrans=1
 "se t_Co=16
-colorscheme solarized
+try
+    colorscheme solarized
+catch
+    " give up
+endtry
 
 " enable syntax highlighting
 syntax enable
