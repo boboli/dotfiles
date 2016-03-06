@@ -57,6 +57,7 @@ function verify_add_github() {
   local actual_fingerprint=$(ssh-keyscan -t rsa github.com > /tmp/github.pub 2>/dev/null && ssh-keygen -l -E sha256 -f /tmp/github.pub | awk '{ print $2}')
   if [[ $actual_fingerprint = $expected_fingerprint ]]; then
     # make backup
+    touch ~/.ssh/known_hosts
     cp ~/.ssh/known_hosts{,.old}
     ssh-keyscan -H github.com 2>/dev/null | sort -u - ~/.ssh/known_hosts > /tmp/known_hosts
     mv /tmp/known_hosts ~/.ssh/known_hosts
