@@ -298,7 +298,7 @@ fi
 if [[ ! -d $DOTFILES ]]; then
   # $DOTFILES directory doesn't exist? Clone it!
   # Need to add github to known_hosts first!
-  if [[ !verify_add_github ]]; then
+  if ! verify_add_github; then
     e_error "Github SSH key could not be verified!"
     exit 1
   fi
