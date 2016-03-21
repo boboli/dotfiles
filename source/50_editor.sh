@@ -3,7 +3,7 @@
 if [[ ! "$SSH_TTY" ]] && is_osx; then
   export EDITOR='mvim'
 else
-  export EDITOR='mvim -v'
+  export EDITOR='vim'
 fi
 
 export VISUAL="$EDITOR"
