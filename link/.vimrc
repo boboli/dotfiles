@@ -61,7 +61,7 @@ set softtabstop=4
 set expandtab
 " set list listchars=tab:→\ ,trail:·
 " shows tabs and trailing spaces
-set listchars=tab:▸\ ,trail:·,eol:¬,nbsp:_,extends:>,precedes:<
+set list listchars=tab:▸\ ,trail:·,nbsp:_,extends:>,precedes:<
 " allows backspace to work on...
 set backspace=indent,eol,start
 
