@@ -12,6 +12,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-rhubarb'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-unimpaired'
@@ -29,7 +30,7 @@ let g:sls_use_jinja_syntax = 0
 if has('gui_running')
     set background=light
 else
-    set background=light
+    set background=dark
 endif
 
 if has('mouse_sgr')
@@ -40,8 +41,6 @@ let g:solarized_termtrans=1
 "se t_Co=16
 try
     colorscheme solarized
-catch
-    " give up
 endtry
 
 " enable syntax highlighting
@@ -106,7 +105,11 @@ set cursorline
 " 80 chars column highlight
 set colorcolumn=80
 
-let g:syntastic_python_checkers=['flake8']
+" highlight nonascii chars
+syntax match nonascii "[^\x00-\x7F]"
+highlight nonascii guibg=Red ctermbg=2
+
+"let g:syntastic_python_checkers=['flake8']
 let g:syntastic_check_on_open=1
 let g:syntastic_echo_current_error=1
 let g:syntastic_enable_signs=1
